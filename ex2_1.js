@@ -6,3 +6,5 @@ form.addEventListener("submit", (e) => { //Fica “escutando” o envio do formu
     resposta.innerText = `Olá ${nome}` // Altera o conteúdo do <h3>. Se a pessoa digitou Erica, aparecerá:
     e.preventDefault() //Impede o comportamento padrão do formulário, que seria enviar os dados e recarregar a página.
 })
+
+//ele seleciona o form e a resposta, le a resposta do nome, muda o texto do h3
