@@ -57,3 +57,49 @@ function TriangleType(a, b, c) {
 }
 
 console.log(TriangleType(5, 5, 3));
+
+////////////////////////////////////////////////
+
+function Discount(value) {
+
+    const desconto = value - (value * 0.10)
+
+    if(value >= 200){
+        return desconto
+    } else {
+        return value
+    }
+    
+}
+
+console.log(Discount(250));
+
+
+function ShippingCost(value, isMember) {
+
+  if(value >= 150 || isMember === true && value >= 80){
+    return "Frete Grátis"
+  } else{
+    return 15
+  }
+
+}
+
+console.log(ShippingCost(90, true));
+
+
+function MultipleCheck(num) {
+
+  if(num % 3 === 0 && num % 5 === 0){
+    return "Ambos"
+  } else if (num % 3 === 0){
+    return "Três"
+  } else if (num % 5 === 0){
+    return "Cinco"
+  } else {
+    return "Nenhum"
+  }
+
+}
+
+console.log(MultipleCheck(15));
