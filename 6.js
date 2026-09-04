@@ -166,7 +166,13 @@ A função SalaryCategory(salary, years) deve retornar:
 
 function SalaryCategory(salary, years) {
 
-  // seu código aqui
+  if(salary >= 5000 && years >= 5){
+    return "Senior"
+  } else if (salary >= 3000){
+    return "Pleno"
+  } else {
+    return "Junior"
+  }
 
 }
 
