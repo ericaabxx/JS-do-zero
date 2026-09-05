@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programa numeros decrecesntes</h1>
+    <form>
+        <p>Número:
+            <input type="number" id="inNumero">
+        </p>
+        <input type="submit" value="decrescer até 1">
+    </form>
+    <h3></h3>
+</body>
+<script>
+      const form = document.querySelector("form")
+        const resp = document.querySelector("h3")
+
+    form.addEventListener("submit", (e) => {
+        
+        e.preventDefault()
+        const numero = Number(form.inNumero.value)
+        let resposta = `Entre ${numero} e 1: `
+
+        for(let i = numero; i > 0; i--){ //enquanto i for maior que 0 vai continuar diminuindo os números 
+            resposta = resposta + i + ","
+        }
+
+        resp.innerText = resposta
+    })
+</script>
+</html>

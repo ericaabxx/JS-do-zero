@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <form>
+        <p>Número:
+            <input type="number" id="inNumero">
+        </p>
+        <input type="submit" value="Mostrar Tabuada">
+    </form>
+    <pre></pre>
+</body>
+<script>
+      const form = document.querySelector("form")
+    const resp = document.querySelector("pre")
+
+    form.addEventListener("submit", (e) => {
+        
+        e.preventDefault()
+        const numero = Number(form.inNumero.value)
+        let resposta = ""
+
+        for(let i = 1; i <=10; i++){
+            resposta = resposta + numero + "x" + i + "=" + (numero * i) + "\n"
+        }
+
+        resp.innerText = resposta
+    })
+</script>
+</html>
